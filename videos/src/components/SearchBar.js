@@ -1,8 +1,18 @@
 import React from "react";
 
+
+
+
 class SearchBar extends React.Component{
      render(){
-         return <div>Search Bar</div>
+         return <div>
+             <form>
+                    <div>
+                        <input></input>
+                        
+                    </div>
+             </form>
+         </div>
      }
 
 
