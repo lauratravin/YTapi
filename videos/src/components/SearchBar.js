@@ -14,7 +14,8 @@ class SearchBar extends React.Component{
     };
     onFormSubmit = (e) => {
         
-        //to add callback parent component
+        this.props.onFormSubmit(this.state.term) //call back the parent to launch axios
+    
         e.preventDefault();
     }
 
