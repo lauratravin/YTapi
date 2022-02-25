@@ -9,7 +9,7 @@ const VideoItem = ({video}) => {
 
     return <div className="ui items"  key={video.id.videoId}> 
                   
-                            <div className="item">
+                            <div className="item pointer">
                                 
                                         {/* <div class="ui vertical divider"></div> */}
                                         <div className="image">

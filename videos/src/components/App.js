@@ -7,7 +7,9 @@ import VideoList from "./VideoList";
 
 class App extends React.Component {
 
-  state = {videos: []}
+  state = {videos: [],
+           selectedVideo: null}
+
 
   onTermSubmit = async term => { //this is concatenate with youtube params
    const response = await  youtube.get('/search',  { params: { q: term} }  );
@@ -16,7 +18,10 @@ class App extends React.Component {
    console.log(this.state.videos)
   }
 
-
+  onVideoSelect = (videoIdselected) => {
+    console.log(videoIdselected)
+    //  this.setState( {selectedVideo: videoIdselected })
+  }
 
   render(){
 
