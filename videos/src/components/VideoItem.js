@@ -1,21 +1,31 @@
 import { isRefObject } from "@fluentui/react-component-ref";
 import React from "react";
+import './App.css'
 
 const VideoItem = ({video}) => {
 
     console.log(video)
     const url = "https://www.youtube.com/embed/" + video.id.videoId;
-   return <div key={video.id.videoId}> {video.snippet.title}
-        
-         <img src={video.snippet.thumbnails.medium.url}/>
-        <iframe width="560" height="315"  
-        src={url} ></iframe>
-        </div> 
+
+    return <div className="ui items"  key={video.id.videoId}> 
+                  
+                            <div className="item">
+                                
+                                        {/* <div class="ui vertical divider"></div> */}
+                                        <div className="image">
+                                                {/* <img  src={video.snippet.thumbnails.medium.url}/> */}
+                                                <iframe    src={url} ></iframe>
+                                        </div>
+                                        <div className="content2">
+                                            <h2 className="header">{video.snippet.title}</h2>
+                                            <p className="description">{video.snippet.description}</p>
+                                        </div>
+                            </div>      
+                            <div style={{ borderTop: "1px solid #000 ", marginLeft: 10, marginRight:10 }}></div>               
+                   
+            </div> 
 }
 
 export default VideoItem;
 
 
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/qvAtjkQlEuQ" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}

@@ -3,3 +3,9 @@ body {
     padding: 0px;
     
 }
+.content2{
+   /* padding-left: 15%; */
+   background-color: #f8f8f8;
+   width: 90%;
+   padding: 15px 10px 5px 15%;
+}
