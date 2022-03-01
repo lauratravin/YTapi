@@ -2,14 +2,14 @@ import { isRefObject } from "@fluentui/react-component-ref";
 import React from "react";
 import './App.css'
 
-const VideoItem = ({video}) => {
+const VideoItem = ({video,onVideoSelect}) => {
 
-    console.log(video)
+    // console.log(video)
     const url = "https://www.youtube.com/embed/" + video.id.videoId;
 
     return <div className="ui items"  key={video.id.videoId}> 
                   
-                            <div className="item pointer">
+                            <div onClick={() => onVideoSelect(video)} className="item pointer">
                                 
                                         {/* <div class="ui vertical divider"></div> */}
                                         <div className="image">
