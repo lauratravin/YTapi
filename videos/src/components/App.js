@@ -20,17 +20,20 @@ class App extends React.Component {
   }
 
   onVideoSelect = videoIdselected => {
-    console.log(videoIdselected)
+    // console.log(videoIdselected)
     this.setState( {selectedVideo: videoIdselected })
   }
 
   render(){
-
+    const detailvideo = this.state.selectedVideo
+    console.log(detailvideo)
     return(
        <div className="ui container">
+         
           <SearchBar onFormSubmit={this.onTermSubmit} />
-          I have {this.state.videos.length} videos.
-          <VideoDetail video = { this.state.selectedVideo }  />
+          {/* I have {this.state.videos.length} videos. */}
+          { detailvideo
+          ?  <VideoDetail video = { this.state.selectedVideo } /> : " " }
           <VideoList onVideoSelect={this.onVideoSelect}  videos={this.state.videos} />
          
        </div>
