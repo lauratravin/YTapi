@@ -6,7 +6,7 @@ const VideoDetail = ({video}) => {
     
         <div>
             <div className="ui embed">
-                <iframe  src={`https://www.youtube.com/embed/`+video.id.videoId} ></iframe> 
+                <iframe  title="video player" src={`https://www.youtube.com/embed/`+video.id.videoId} ></iframe> 
             </div>     
             <div className="ui segment">
              
