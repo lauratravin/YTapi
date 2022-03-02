@@ -1,5 +1,6 @@
 {
   "name": "videos",
+  "homepage": "https://blog.lauratravin.info/react-api-videos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
