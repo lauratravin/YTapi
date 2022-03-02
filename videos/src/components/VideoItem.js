@@ -5,16 +5,17 @@ import './App.css'
 const VideoItem = ({video,onVideoSelect}) => {
 
     // console.log(video)
-    const url = "https://www.youtube.com/embed/" + video.id.videoId;
+    const url = "https://www.youtube.com/embed/" + video.id.videoId; // `https://www.youtube.com/embed/${video.id.videoId}`
 
-    return <div className="ui items"  key={video.id.videoId}> 
+    return <div className="ui items"  key={video.id.videoId}>  
+
                   
                             <div onClick={() => onVideoSelect(video)} className="item pointer">
                                 
-                                        {/* <div class="ui vertical divider"></div> */}
-                                        <div className="image">
-                                                {/* <img  src={video.snippet.thumbnails.medium.url}/> */}
-                                                <iframe    src={url} ></iframe>
+                                        
+                                        <div className="embed">
+                                        
+                                                <iframe   src={url} ></iframe>
                                         </div>
                                         <div className="content2">
                                             <h2 className="header">{video.snippet.title}</h2>
