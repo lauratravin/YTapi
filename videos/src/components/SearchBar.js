@@ -26,6 +26,7 @@ class SearchBar extends React.Component{
                     <div className="field">
                         <label>Videos Search</label>
                         <input type="text" 
+                        placeholder="cats"
                         value={this.state.term} 
                         onChange={ this.onInputChange}/>
                     </div>
